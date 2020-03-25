@@ -5,11 +5,11 @@ public class ReverseR {
     public static void main(String[] args) {
 
     }
-    public static ListNode reverseR(ListNode head){
+    public static Node reverseR(Node head){
         if (head == null || head.next == null){
             return head;
         }
-        ListNode res = reverseR(head.next);
+        Node res = reverseR(head.next);
         head.next.next = head;
         head.next = null;
         return res;

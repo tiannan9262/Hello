@@ -9,10 +9,10 @@ public class t06 {
     }
 }
 
-class ListNode {
+class Node {
     int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
+    Node next;
+    Node(int x) { val = x; }
 }
 // 反向打印链表
 /**
@@ -24,9 +24,9 @@ class ListNode {
  }
  */
 class SolutionT6 {
-    public int[] reversePrint(ListNode head) {
+    public int[] reversePrint(Node head) {
         Stack<Integer> stack = new Stack<>();             // 新建栈
-        ListNode temp = head;                             // 链表首节点
+        Node temp = head;                             // 链表首节点
         while (temp != null){                             //
             stack.push(temp.val);
             temp = temp.next;
